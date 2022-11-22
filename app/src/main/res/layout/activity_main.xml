@@ -22,7 +22,8 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <fragment
+<!--        fragment container for all app fragments-->
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/navigation"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"

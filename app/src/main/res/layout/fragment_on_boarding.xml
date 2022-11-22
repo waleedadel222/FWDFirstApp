@@ -3,47 +3,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".views.fragments.OnBoardingFragment">
 
+    <!--    LinearLayout is the parent layout ,
+            organize all main components relationships-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_130"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="@dimen/dim_64"
             android:contentDescription="@string/welcome"
             android:src="@drawable/ic_waving_hand" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_margin="@dimen/dim_16"
             android:gravity="center"
             android:text="@string/onboard"
             android:textColor="@color/colorPrimary"
-            android:textSize="16sp"
+            android:textSize="@dimen/dim_txt_24"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/dim_8"
             android:gravity="center"
             android:text="@string/happy_to_have_you"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="@dimen/dim_txt_16" />
 
         <Button
             android:id="@+id/instructButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="32dp"
+            android:layout_margin="@dimen/dim_32"
             android:background="@drawable/border_solid"
             android:text="@string/go_to_instructions"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="@dimen/dim_txt_16" />
 
     </LinearLayout>
 

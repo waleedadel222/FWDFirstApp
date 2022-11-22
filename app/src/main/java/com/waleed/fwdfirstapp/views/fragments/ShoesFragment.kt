@@ -18,6 +18,7 @@ import com.waleed.fwdfirstapp.viewmodels.ShoesViewModel
 class ShoesFragment : Fragment() {
 
     private lateinit var shoesBinding: FragmentShoesBinding
+
     private lateinit var shoesViewModel: ShoesViewModel
 
     override fun onCreateView(
@@ -30,11 +31,11 @@ class ShoesFragment : Fragment() {
         setHasOptionsMenu(true)
 
         shoesViewModel = ViewModelProvider(requireActivity())[ShoesViewModel::class.java]
+
         shoesViewModel.shoes.observe(viewLifecycleOwner) { item: List<Shoe> ->
 
             addShoesListItem(item)
         }
-
         shoesBinding.lifecycleOwner = viewLifecycleOwner
 
         shoesBinding.addShoeFloatingButton.setOnClickListener { view: View ->
@@ -59,7 +60,6 @@ class ShoesFragment : Fragment() {
         return when (item.itemId) {
             R.id.logoutMenuItem -> {
 
-
                 findNavController().navigate(ShoesFragmentDirections.actionShoesFragmentToLoginFragment())
 
                 true
@@ -73,41 +73,51 @@ class ShoesFragment : Fragment() {
 
     private fun addShoesListItem(item: List<Shoe>) {
 
+
         item.forEach {
+
             val bindingView = ShoeListItemBinding.inflate(
                 LayoutInflater.from(requireContext()),
                 shoesBinding.shoeLinearLayout,
                 false
             )
 
-            bindingView.shoeNameTextView.text = it.name
-            bindingView.shoeSizeTextView.text = it.size
-            bindingView.shoeCompanyTextView.text = it.company
-            bindingView.shoeDescriptionTextView.text = it.description
+            with(bindingView) {
+                shoeNameTextView.text = it.name
+                shoeSizeTextView.text = it.size
+                shoeCompanyTextView.text = it.company
+                shoeDescriptionTextView.text = it.description
 
-            shoesBinding.shoeLinearLayout.addView(bindingView.root)
+                shoesBinding.shoeLinearLayout.addView(root)
+            }
         }
+
     }
+
 
     private fun addShoesFirstTime() {
-
-        val bindingView = ShoeListItemBinding.inflate(
-            LayoutInflater.from(requireContext()),
-            shoesBinding.shoeLinearLayout,
-            false
+        val shoes1 = Shoe(
+            "Name: shoe 1", "Size: 16", "Company: adidas",
+            "Description: running shoes"
         )
 
-        var shoes1 =
-            Shoe(
-                "Name: shoe 1", "Size: 16", "Company: adidas",
-                "Description: running shoes"
-            )
-        bindingView.shoeNameTextView.text = shoes1.name
-        bindingView.shoeSizeTextView.text = shoes1.size
-        bindingView.shoeCompanyTextView.text = shoes1.company
-        bindingView.shoeDescriptionTextView.text = shoes1.description
+        val bindingView = ShoeListItemBinding.inflate(
+            LayoutInflater.from(requireContext()), shoesBinding.shoeLinearLayout, false
+        )
 
-        shoesBinding.shoeLinearLayout.addView(bindingView.root)
+
+        with(bindingView) {
+            shoeNameTextView.text = shoes1.name
+            shoeSizeTextView.text = shoes1.size
+            shoeCompanyTextView.text = shoes1.company
+            shoeDescriptionTextView.text = shoes1.description
+
+            shoesBinding.shoeLinearLayout.addView(root)
+
+        }
+
 
     }
+
 }
+

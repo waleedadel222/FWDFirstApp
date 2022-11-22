@@ -18,4 +18,5 @@
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
     <string name="long_instruction">you can navigate throw the app , add new shoes or cancel them ,all data you added will be visible till you logout</string>
+    <string name="the_app_instruction">the app instruction</string>
 </resources>

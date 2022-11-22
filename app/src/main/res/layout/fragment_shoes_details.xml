@@ -11,6 +11,10 @@
             type="com.waleed.fwdfirstapp.models.Shoe" />
     </data>
 
+
+    <!--    ConstraintLayout is the parent layout ,
+           organize all main components relationships-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,9 +23,9 @@
             android:id="@+id/shoeNameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginTop="@dimen/dim_32"
+            android:layout_marginEnd="@dimen/dim_32"
             android:text="@string/name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,10 +35,11 @@
             android:id="@+id/shoeNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginLeft="@dimen/dim_32"
+            android:layout_marginEnd="@dimen/dim_32"
+            android:layout_marginRight="@dimen/dim_32"
+            android:autofillHints=""
             android:hint="@string/name"
             android:inputType="text"
             android:minHeight="48dp"
@@ -45,11 +50,11 @@
 
         <TextView
             android:id="@+id/sizeTextView"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginTop="@dimen/dim_16"
+            android:layout_marginEnd="@dimen/dim_32"
             android:text="@string/size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,9 +64,9 @@
             android:id="@+id/sizeEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:autofillHints="0.0"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginEnd="@dimen/dim_32"
+            android:autofillHints="0"
             android:hint="@string/size"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
@@ -75,9 +80,9 @@
             android:id="@+id/companyTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginTop="@dimen/dim_16"
+            android:layout_marginEnd="@dimen/dim_32"
             android:text="@string/company"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -87,10 +92,11 @@
             android:id="@+id/companyEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginLeft="@dimen/dim_32"
+            android:layout_marginEnd="@dimen/dim_32"
+            android:layout_marginRight="@dimen/dim_32"
+            android:autofillHints=""
             android:hint="@string/company"
             android:inputType="text"
             android:minHeight="48dp"
@@ -104,9 +110,9 @@
             android:id="@+id/descriptionTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginTop="@dimen/dim_16"
+            android:layout_marginEnd="@dimen/dim_32"
             android:text="@string/description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -116,10 +122,11 @@
             android:id="@+id/descriptionEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginLeft="@dimen/dim_32"
+            android:layout_marginEnd="@dimen/dim_32"
+            android:layout_marginRight="@dimen/dim_32"
+            android:autofillHints=""
             android:hint="@string/description"
             android:inputType="text"
             android:minHeight="48dp"
@@ -128,6 +135,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/descriptionTextView" />
 
+        <!--    LinearLayout is the container
+              of the save and cancel buttons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -141,25 +150,26 @@
                 android:id="@+id/saveButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="32dp"
+                android:layout_marginLeft="@dimen/dim_32"
+                android:layout_marginTop="@dimen/dim_16"
+                android:layout_marginRight="@dimen/dim_32"
                 android:background="@drawable/border_solid"
                 android:text="@string/save"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="@dimen/dim_txt_18" />
 
             <Button
                 android:id="@+id/cancelButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="32dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="@dimen/dim_32"
+                android:layout_marginTop="@dimen/dim_16"
+                android:layout_marginRight="@dimen/dim_32"
+                android:layout_marginBottom="@dimen/dim_16"
                 android:background="@drawable/border_cancel"
                 android:text="@string/cancel"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="@dimen/dim_txt_16" />
 
         </LinearLayout>
 

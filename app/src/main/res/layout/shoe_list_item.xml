@@ -9,12 +9,15 @@
             type="com.waleed.fwdfirstapp.models.Shoe" />
     </data>
 
+    <!--    the shoe item design -->
+    <!--    ConstraintLayout is the parent layout ,
+            organize all components relationships-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/dim_8"
         android:background="@drawable/border_line"
-        android:padding="8dp">
+        android:padding="@dimen/dim_8">
 
         <TextView
             android:id="@+id/shoeNameTextView"
@@ -24,7 +27,7 @@
             android:layout_marginTop="8dp"
             android:hint="@string/name"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/dim_txt_16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,11 +37,11 @@
             android:id="@+id/shoeSizeTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="@dimen/dim_8"
+            android:layout_marginTop="@dimen/dim_8"
             android:hint="@string/size"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/dim_txt_16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoeNameTextView" />
@@ -48,11 +51,11 @@
             android:id="@+id/shoeCompanyTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="@dimen/dim_8"
+            android:layout_marginTop="@dimen/dim_8"
             android:hint="@string/company"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/dim_txt_16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoeSizeTextView" />
@@ -62,11 +65,11 @@
             android:id="@+id/shoeDescriptionTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="@dimen/dim_8"
+            android:layout_marginTop="@dimen/dim_8"
             android:hint="@string/description"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/dim_txt_16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoeCompanyTextView" />

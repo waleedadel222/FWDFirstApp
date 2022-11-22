@@ -17,12 +17,9 @@ import com.waleed.fwdfirstapp.viewmodels.ShoesViewModel
 class ShoesDetailsFragment : Fragment() {
 
     private lateinit var shoesDetailsBinding: FragmentShoesDetailsBinding
-    private lateinit var shoesViewModel: ShoesViewModel
 
-    private var name = ""
-    private var size = ""
-    private var company = ""
-    private var description = ""
+     private lateinit var shoesViewModel: ShoesViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,7 +33,6 @@ class ShoesDetailsFragment : Fragment() {
             Shoe("template name", "22", "template company", "some description about the shoe")
 
         shoesViewModel = ViewModelProvider(requireActivity())[ShoesViewModel::class.java]
-
 
         shoesDetailsBinding.saveButton.setOnClickListener {
 
@@ -52,14 +48,18 @@ class ShoesDetailsFragment : Fragment() {
                 saveShoeDetails(name, size, company, description)
             }
         }
+
+
         shoesDetailsBinding.cancelButton.setOnClickListener {
             findNavController().navigateUp()
 
         }
+
         return shoesDetailsBinding.root
     }
 
     private fun saveShoeDetails(name: String, size: String, company: String, description: String) {
+
 
         shoesViewModel.addShoeDetails(
             "Name: $name",

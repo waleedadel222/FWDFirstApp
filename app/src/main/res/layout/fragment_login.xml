@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".views.fragments.LoginFragment">
 
+    <!--    ConstraintLayout is the parent layout ,
+            organize all main components relationships-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,13 +16,13 @@
             android:id="@+id/welcomeTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginStart="@dimen/dim_24"
+            android:layout_marginTop="@dimen/dim_64"
+            android:layout_marginEnd="@dimen/dim_24"
             android:gravity="center"
             android:text="@string/welcome"
             android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
+            android:textSize="@dimen/dim_txt_24"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,9 +32,9 @@
             android:id="@+id/emailTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginTop="@dimen/dim_8"
+            android:layout_marginEnd="@dimen/dim_32"
             android:text="@string/email"
             android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,10 +45,11 @@
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginLeft="@dimen/dim_32"
+            android:layout_marginEnd="@dimen/dim_32"
+            android:layout_marginRight="@dimen/dim_32"
+            android:autofillHints=""
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
@@ -58,9 +61,9 @@
             android:id="@+id/passwordTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginTop="@dimen/dim_8"
+            android:layout_marginEnd="@dimen/dim_32"
             android:text="@string/password"
             android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
@@ -71,8 +74,9 @@
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="@dimen/dim_32"
+            android:layout_marginEnd="@dimen/dim_32"
+            android:autofillHints=""
             android:hint="@string/password"
             android:inputType="textPassword"
             android:minHeight="48dp"
@@ -80,11 +84,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/passwordTextView" />
 
+        <!--    LinearLayout is the container
+        of the login and register buttons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="@dimen/dim_8"
+            android:layout_marginTop="@dimen/dim_8"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -97,17 +103,17 @@
                 android:background="@drawable/border_solid"
                 android:text="@string/login"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/dim_txt_16" />
 
             <Button
                 android:id="@+id/registerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/dim_8"
                 android:background="@drawable/border_line"
                 android:text="@string/register"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
+                android:textSize="@dimen/dim_txt_16" />
 
         </LinearLayout>
 
