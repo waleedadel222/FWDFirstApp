@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="welcome">Welcome to Shoes Shop</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="onboard">Welcome on Board</string>
+    <string name="go_to_instructions">Instructions</string>
+    <string name="done">Done</string>
+    <string name="happy_to_have_you">Happy to have you with us , have fun using this app</string>
+    <string name="add_new_shoe">Add New shoe</string>
+    <string name="log_out">Logout</string>
+    <string name="name">Name</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+    <string name="description">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="long_instruction">you can navigate throw the app , add new shoes or cancel them ,all data you added will be visible till you logout</string>
+</resources>

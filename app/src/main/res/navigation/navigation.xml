@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.waleed.fwdfirstapp.views.fragments.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_onBoardFragment"
+            app:destination="@id/onboardFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/onboardFragment"
+        android:name="com.waleed.fwdfirstapp.views.fragments.OnBoardingFragment"
+        android:label="Welcome on board"
+        tools:layout="@layout/fragment_on_boarding">
+        <action
+            android:id="@+id/action_welcomeFragment_to_InstructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:popUpTo="@id/onboardFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.waleed.fwdfirstapp.views.fragments.InstructionsFragment"
+        android:label="Instructions"
+        tools:layout="@layout/fragment_instructions">
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoesFragment"
+            app:destination="@id/shoesFragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoesFragment"
+        android:name="com.waleed.fwdfirstapp.views.fragments.ShoesFragment"
+        android:label="Shoes Store"
+        tools:layout="@layout/fragment_shoes">
+        <action
+            android:id="@+id/action_shoesFragment_to_shoesDetailsFragment"
+            app:destination="@id/shoesDetailsFragment" />
+        <action
+            android:id="@+id/action_shoesFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoesDetailsFragment"
+        android:name="com.waleed.fwdfirstapp.views.fragments.ShoesDetailsFragment"
+        android:label="Shoe Details"
+        tools:layout="@layout/fragment_shoes_details">
+        <action
+            android:id="@+id/action_shoesDetailsFragment_to_shoesFragment"
+            app:destination="@id/shoesFragment"
+            app:popUpTo="@id/shoesFragment" />
+    </fragment>
+</navigation>
